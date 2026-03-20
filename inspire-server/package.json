@@ -1,0 +1,29 @@
+{
+  "name": "inspire-server",
+  "version": "2.0.0",
+  "description": "Inspire v2 — Local semantic search server for book and movie recommendations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build:all": "node build/build-all.js",
+    "build:wikidata": "node build/fetch-wikidata.js",
+    "build:tellmeagain": "node build/import-tellmeagain.js",
+    "build:wikiplots": "node build/extract-wikiplots.js",
+    "build:match": "node build/match-plots.js",
+    "build:embeddings": "node build/generate-embeddings.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "sql.js": "^1.14.1",
+    "sqlite-vec": "^0.1.6"
+  },
+  "devDependencies": {
+    "nexe": "^4.0.0-rc.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+=== Direct search module test ===
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+Results: 10 total_found: 20 time: 323ms
+  1. [verified conf=0.6721 sim=0.5359] Robinson Crusoe
+  2. [verified conf=0.6273 sim=0.5276] Moby Dick
+  3. [verified conf=0.6517 sim=0.571] L'isola del tesoro
+  4. [verified conf=0.606 sim=0.5142] I viaggi di Gulliver
+  5. [verify_online conf=0.5297 sim=0.5595] I figli del capitano Grant
+  6. [verify_online conf=0.5222 sim=0.5788] Pirati! Briganti da strapazzo
+  7. [verify_online conf=0.4775 sim=0.5321] Le avventure del capitano Hatteras
+  8. [verify_online conf=0.4657 sim=0.5281] Capitan Blood
+  9. [verify_online conf=0.4225 sim=0.5136] The Sea Serpent
+  10. [verify_online conf=0.4591 sim=0.5744] Robinson nell'isola dei corsari
+
+=== Direct vectorSearch test ===
+Got embedding, length: 768
+vectorSearch results: 10
+  1. sim=0.7406 I tredici spettri
+  2. sim=0.7209 I 13 fantasmi
+  3. sim=0.6814 Nave fantasma
+  4. sim=0.6809 The Grudge
+  5. sim=0.6618 Tre passi nel delirio
+  6. sim=0.6549 Lights Out - Terrore nel buio
+  7. sim=0.6540 The Mummy's Ghost
+  8. sim=0.6526 Sinister
+  9. sim=0.6491 Il ritorno nella casa sulla collina
+  10. sim=0.6438 L'evocazione - The Conjuring
+[db] Database closed

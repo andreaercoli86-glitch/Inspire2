@@ -1,0 +1,8 @@
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+Work IDs: [{"id":1,"t":"integer"},{"id":2,"t":"integer"},{"id":3,"t":"integer"}]
+Buffer length: 3072 expected: 3072
+Direct insert error: Only integers are allows for primary key values on vec_works
+Null IDs: 0
+Min ID: 1 Max ID: 14472
+[db] Database closed

@@ -1,0 +1,13 @@
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+Test 1: Integer literal in SQL
+  SUCCESS via hex literal!
+Test 2: Using integer() wrapper
+  SUCCESS via CAST!
+Test 3: Using BigInt
+  SUCCESS via BigInt!
+Test 4: Using vec_f32
+  Error: Only integers are allows for primary key values on vec_works
+Test 5: rowid instead of work_id
+  Error: table vec_works has no column named rowid
+[db] Database closed

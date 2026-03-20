@@ -1,0 +1,2 @@
+SQLite: 3.49.2 | sqlite-vec: v0.1.6
+OK: Native modules work!

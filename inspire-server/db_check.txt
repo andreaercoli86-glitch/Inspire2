@@ -1,0 +1,35 @@
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+Books: 4713
+Movies: 9759
+Total: 14472
+
+Top 10 books by sitelinks:
+  280 - Corano (?, null) genres=["religious literature"]
+  177 - Iliade (Homer, null) genres=["epic poem"]
+  176 - Antico Testamento (various authors, null) genres=["religious literature"]
+  174 - Genesi (?, null) genres=["religious text"]
+  167 - Mahābhārata (Vyāsa, null) genres=["epic poem"]
+  157 - Le mille e una notte (various authors, null) genres=[]
+  152 - Vangelo secondo Marco (Mark the Evangelist, null) genres=["Gospel"]
+  150 - Libro dell'Esodo (?, null) genres=["religious text"]
+  147 - Don Chisciotte della Mancia (Miguel de Cervantes, 1605) genres=["chivalric romance","parody","adventure fiction","found manuscript"]
+  147 - Odissea (Homer, null) genres=["epic poem"]
+
+Top 10 movies by sitelinks:
+  136 - Titanic (James Cameron, 1997) genres=["drama film","disaster film","romance film","epic film","historical film"]
+  128 - Il padrino (Francis Ford Coppola, 1972) genres=["drama film","crime film","epic film","gangster film","suspense film"]
+  122 - Avatar (James Cameron, 2009) genres=["action film","adventure film","military science fiction","science fiction film","epic film"]
+  114 - Matrix (Lilly Wachowski, 1999) genres=["cyberpunk","film noir","action film","science fiction film","action thriller"]
+  108 - Il gladiatore (Ridley Scott, 2000) genres=["drama film","action film","adventure film","epic film","sword-and-sandal film"]
+  107 - Pulp Fiction (Quentin Tarantino, 1994) genres=["drama film","comedy film","action film","crime film","comedy drama"]
+  107 - Il cavaliere oscuro (Christopher Nolan, 2008) genres=["drama film","action film","crime film","thriller film","crime thriller film"]
+  107 - Le ali della libertà (Frank Darabont, 1994) genres=["drama film","prison film","buddy film","crime film","film based on literature"]
+  105 - Casablanca (Michael Curtiz, 1942) genres=["drama film","film noir","war film","romance film","flashback film"]
+  104 - Ritorno al futuro (Robert Zemeckis, 1985) genres=["comedy film","adventure film","science fiction film","teen film","speculative fiction film"]
+
+Books with genres:
+  3403 / 4713
+Movies with genres:
+  9706 / 9759
+[db] Database closed

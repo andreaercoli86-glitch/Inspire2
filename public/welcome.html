@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspire — Benvenuto</title>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --surface: #14141f;
+            --border: #2a2a3a;
+            --text: #e8e8f0;
+            --text-muted: #8888aa;
+            --accent: #7c5cfc;
+            --accent-glow: rgba(124, 92, 252, 0.3);
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo h1 {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #7c5cfc 0%, #a78bfa 50%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .logo p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2 .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .card p, .card li {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .card li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        code {
+            background: var(--bg);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .status-panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 32px;
+            margin-bottom: 24px;
+        }
+
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .status-row + .status-row {
+            border-top: 1px solid var(--border);
+        }
+
+        .status-label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status-value {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .status-ok { background: rgba(34,197,94,0.15); color: var(--success); }
+        .status-warn { background: rgba(245,158,11,0.15); color: var(--warning); }
+        .status-err { background: rgba(239,68,68,0.15); color: var(--error); }
+        .status-loading { background: rgba(136,136,170,0.15); color: var(--text-muted); }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 16px;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover { background: #6b4ce6; transform: translateY(-1px); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .checking { animation: pulse 1.5s ease-in-out infinite; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Inspire</h1>
+            <p>Raccomandazioni di libri e film con AI locale</p>
+        </div>
+
+        <!-- Status Panel -->
+        <div class="status-panel">
+            <div class="status-row">
+                <span class="status-label">Ollama</span>
+                <span id="statusOllama" class="status-value status-loading checking">Verifica...</span>
+            </div>
+            <div class="status-row">
+                <span class="status-label">Modello LLM</span>
+                <span id="statusModel" class="status-value status-loading checking">Verifica...</span>
+            </div>
+            <div class="status-row">
+                <span class="status-label">Modello Embeddings</span>
+                <span id="statusEmbed" class="status-value status-loading checking">Verifica...</span>
+            </div>
+            <div class="status-row">
+                <span class="status-label">Database</span>
+                <span id="statusDb" class="status-value status-loading checking">Verifica...</span>
+            </div>
+        </div>
+
+        <!-- Setup Steps -->
+        <div class="card" id="stepOllama" style="display:none;">
+            <h2><span class="step-num">1</span> Installa Ollama</h2>
+            <p>Ollama non è stato rilevato. Scaricalo e installalo per continuare.</p>
+            <a href="https://ollama.com/download" target="_blank" class="btn-primary">Scarica Ollama</a>
+        </div>
+
+        <div class="card" id="stepModels" style="display:none;">
+            <h2><span class="step-num">2</span> Scarica i modelli</h2>
+            <p>Apri un terminale ed esegui questi comandi:</p>
+            <ul>
+                <li><code>ollama pull gemma3:4b</code> — Modello LLM (raccomandazioni)</li>
+                <li><code>ollama pull nomic-embed-text-v2-moe</code> — Embeddings multilingue</li>
+            </ul>
+        </div>
+
+        <div class="card" id="stepDb" style="display:none;">
+            <h2><span class="step-num">3</span> Costruisci il database</h2>
+            <p>Il database delle opere non è ancora stato generato. Esegui nel terminale:</p>
+            <ul>
+                <li><code>cd inspire-server</code></li>
+                <li><code>npm install</code></li>
+                <li><code>npm run build:all</code></li>
+            </ul>
+            <p style="margin-top:12px;">Questo processo richiede circa 30-60 minuti la prima volta.</p>
+        </div>
+
+        <!-- Ready -->
+        <a href="/index.html" id="btnStart" class="btn-primary" style="display:none;">
+            Avvia Inspire
+        </a>
+
+        <div class="footer">
+            <p>Inspire v2 — 100% locale, 100% open source</p>
+            <p style="margin-top:4px;"><a href="https://github.com" target="_blank">GitHub</a></p>
+        </div>
+    </div>
+
+    <script>
+        const OLLAMA_BASE = 'http://localhost:11434';
+        const SERVER_BASE = window.location.origin;
+
+        async function checkStatus() {
+            let allOk = true;
+
+            // 1. Check Ollama
+            const elOllama = document.getElementById('statusOllama');
+            let ollamaOk = false;
+            let models = [];
+            try {
+                const res = await fetch(`${OLLAMA_BASE}/api/tags`, { signal: AbortSignal.timeout(3000) });
+                const data = await res.json();
+                models = (data.models || []).map(m => m.name?.split(':')[0] || m.name);
+                ollamaOk = true;
+                elOllama.textContent = 'Attivo';
+                elOllama.className = 'status-value status-ok';
+            } catch {
+                elOllama.textContent = 'Non trovato';
+                elOllama.className = 'status-value status-err';
+                allOk = false;
+                document.getElementById('stepOllama').style.display = '';
+            }
+
+            // 2. Check LLM model
+            const elModel = document.getElementById('statusModel');
+            const llmModels = ['gemma3', 'gemma2', 'llama3', 'mistral', 'qwen', 'deepseek'];
+            const hasLlm = models.some(m => llmModels.some(l => m.includes(l)));
+            if (!ollamaOk) {
+                elModel.textContent = 'Ollama richiesto';
+                elModel.className = 'status-value status-err';
+                allOk = false;
+            } else if (hasLlm) {
+                elModel.textContent = 'Trovato';
+                elModel.className = 'status-value status-ok';
+            } else {
+                elModel.textContent = 'Non trovato';
+                elModel.className = 'status-value status-warn';
+                allOk = false;
+                document.getElementById('stepModels').style.display = '';
+            }
+
+            // 3. Check embedding model
+            const elEmbed = document.getElementById('statusEmbed');
+            const hasEmbed = models.some(m => m.includes('nomic-embed'));
+            if (!ollamaOk) {
+                elEmbed.textContent = 'Ollama richiesto';
+                elEmbed.className = 'status-value status-err';
+                allOk = false;
+            } else if (hasEmbed) {
+                elEmbed.textContent = 'nomic-embed-text-v2-moe';
+                elEmbed.className = 'status-value status-ok';
+            } else {
+                elEmbed.textContent = 'Non trovato';
+                elEmbed.className = 'status-value status-warn';
+                allOk = false;
+                document.getElementById('stepModels').style.display = '';
+            }
+
+            // 4. Check database via server stats
+            const elDb = document.getElementById('statusDb');
+            try {
+                const res = await fetch(`${SERVER_BASE}/api/stats`, { signal: AbortSignal.timeout(3000) });
+                const data = await res.json();
+                if (data.works > 0 && data.embeddings > 0) {
+                    elDb.textContent = `${data.works.toLocaleString()} opere`;
+                    elDb.className = 'status-value status-ok';
+                } else {
+                    elDb.textContent = 'Vuoto';
+                    elDb.className = 'status-value status-warn';
+                    allOk = false;
+                    document.getElementById('stepDb').style.display = '';
+                }
+            } catch {
+                elDb.textContent = 'Server offline';
+                elDb.className = 'status-value status-err';
+                allOk = false;
+            }
+
+            // Show start button if all ok
+            if (allOk) {
+                document.getElementById('btnStart').style.display = '';
+            }
+        }
+
+        // Initial check + polling
+        checkStatus();
+        setInterval(checkStatus, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+{"total_works":0,"books":0,"movies":0,"with_plots_en":0,"with_plots_it":0,"with_embeddings":0,"embedding_model":"nomic-embed-text-v2-moe","embedding_dim":768}
+[db] Database closed

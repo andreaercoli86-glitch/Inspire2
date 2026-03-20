@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Database files
+data/*.db
+data/*.db-shm
+data/*.db-wal
+inspire-server/data/*.db*
+
+# Log and output files
+*_log.txt
+*_out.txt
+*_err.txt
+*-log.txt
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Tool / install artifacts
+install_status.txt
+npm_full_log.txt
+ollama_check.txt
+
+# Editor and IDE
+.claude/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Native addons
+*.node
+
+# Installer output
+installer/output/
+
+# Build data (large files)
+inspire-server/plots_data/*.zip
+inspire-server/plots_data/wikiplots/
+inspire-server/plots_data/narrasum/

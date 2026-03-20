@@ -1,0 +1,19 @@
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+Query vec length: 768 sample: [ 0.035463158, 0.049115464, -0.024785273, -0.06405576, -0.0075517534 ]
+Buffer size: 3072
+
+Raw vec results: 10
+  1. dist=0.8801 sim=0.6127 [book] Il Corsaro Nero (sl=12)
+  2. dist=0.9011 sim=0.5940 [movie] L'isola del tesoro (sl=17)
+  3. dist=0.9129 sim=0.5833 [book] Captain Blood (sl=16)
+  4. dist=0.9147 sim=0.5817 [movie] Il faro in capo al mondo (sl=17)
+  5. dist=0.9178 sim=0.5788 [movie] Pirati! Briganti da strapazzo (sl=39)
+  6. dist=0.9194 sim=0.5774 [book] L'invasione del mare (sl=16)
+  7. dist=0.9226 sim=0.5744 [movie] Robinson nell'isola dei corsari (sl=19)
+  8. dist=0.9262 sim=0.5710 [book] L'isola del tesoro (sl=84)
+  9. dist=0.9386 sim=0.5595 [book] I figli del capitano Grant (sl=46)
+  10. dist=0.9515 sim=0.5474 [movie] I pirati dello spazio (sl=17)
+
+Stored embeddings sample: [{"work_id":1,"len":3072},{"work_id":2,"len":3072},{"work_id":3,"len":3072}]
+[db] Database closed

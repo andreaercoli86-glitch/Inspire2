@@ -1,0 +1,17 @@
+[db] sqlite-vec loaded successfully
+[db] Database ready: C:\Users\PIETRO\Documents\GitHub\InspireMe2\data\inspire.db
+Tables: plots (table), search_text (table), search_text_config (table), search_text_content (table), search_text_data (table), search_text_docsize (table), search_text_idx (table), sqlite_sequence (table), vec_works (table), vec_works_chunks (table), vec_works_info (table), vec_works_rowids (table), vec_works_vector_chunks00 (table), works (table)
+vec_works count: 0
+Test insert error: Only integers are allows for primary key values on vec_works
+Stack: SqliteError: Only integers are allows for primary key values on vec_works
+    at Object.insertEmbedding (C:\Users\PIETRO\Documents\GitHub\InspireMe2\inspire-server\db.js:279:17)
+    at Object.<anonymous> (C:\Users\PIETRO\Documents\GitHub\InspireMe2\inspire-server\debug_vec.js:20:8)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+[db] Database closed

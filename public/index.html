@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Inspire [Qwen] — Trova ispirazione attraverso le storie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════ SETUP WIZARD ═══════════ -->
+    <div class="setup-overlay" id="setupOverlay">
+        <div class="setup-box">
+            <div class="setup-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="36" height="36">
+                    <defs>
+                        <linearGradient id="s-ringLeft" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+                        <linearGradient id="s-ringRight" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
+                        <linearGradient id="s-gN" x1="50%" y1="100%" x2="50%" y2="0%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+                        <linearGradient id="s-gNE" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
+                        <linearGradient id="s-gE" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#f97316"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
+                        <linearGradient id="s-gSE" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+                        <linearGradient id="s-gS" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#f97316"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
+                        <linearGradient id="s-gSW" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#84cc16"/><stop offset="100%" stop-color="#22c55e"/></linearGradient>
+                        <linearGradient id="s-gW" x1="100%" y1="50%" x2="0%" y2="50%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#14b8a6"/></linearGradient>
+                        <linearGradient id="s-gNW" x1="100%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                        <radialGradient id="s-centerGlow"><stop offset="0%" stop-color="#fde68a"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></radialGradient>
+                    </defs>
+                    <path d="M60 12 A48 48 0 0 1 108 60" fill="none" stroke="url(#s-ringLeft)" stroke-width="2.5" opacity="0.5"/>
+                    <path d="M108 60 A48 48 0 0 1 60 108" fill="none" stroke="url(#s-ringRight)" stroke-width="2.5" opacity="0.5"/>
+                    <path d="M60 108 A48 48 0 0 1 12 60" fill="none" stroke="url(#s-ringRight)" stroke-width="2.5" opacity="0.4"/>
+                    <path d="M12 60 A48 48 0 0 1 60 12" fill="none" stroke="url(#s-ringLeft)" stroke-width="2.5" opacity="0.4"/>
+                    <circle cx="60" cy="60" r="38" fill="none" stroke="url(#s-ringLeft)" stroke-width="1.5" opacity="0.25"/>
+                    <polygon points="60,14 54,50 60,44 66,50" fill="url(#s-gN)"/>
+                    <polygon points="93,27 67,53 64,48 70,45" fill="url(#s-gNE)"/>
+                    <polygon points="106,60 70,54 76,60 70,66" fill="url(#s-gE)"/>
+                    <polygon points="93,93 67,67 70,64 73,70" fill="url(#s-gSE)"/>
+                    <polygon points="60,106 66,70 60,76 54,70" fill="url(#s-gS)"/>
+                    <polygon points="27,93 53,67 56,70 50,73" fill="url(#s-gSW)"/>
+                    <polygon points="14,60 50,66 44,60 50,54" fill="url(#s-gW)"/>
+                    <polygon points="27,27 53,53 50,56 45,50" fill="url(#s-gNW)"/>
+                    <circle cx="60" cy="60" r="7" fill="url(#s-centerGlow)"/>
+                    <circle cx="60" cy="60" r="4" fill="#fef3c7" opacity="0.9"/>
+                </svg>
+                <span class="setup-brand-text">INSPIRE</span>
+            </div>
+            <div class="setup-subtitle">Trova ispirazione attraverso le storie</div>
+
+            <div class="steps-indicator">
+                <div class="step-num active" id="sNum1">1</div>
+                <div class="step-line" id="sLine1"></div>
+                <div class="step-num" id="sNum2">2</div>
+                <div class="step-line" id="sLine2"></div>
+                <div class="step-num" id="sNum3">3</div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="setup-step active" id="step1">
+                <div class="step-icon">📦</div>
+                <div class="step-title">Installa Ollama</div>
+                <div class="step-desc">
+                    Inspire usa un'IA locale sul tuo computer.
+                    Nessun cloud, nessun account — tutto resta privato.
+                    Come primo passo, installiamo Ollama (il motore IA).
+                </div>
+                <div class="os-badge" id="osBadge">Rilevamento OS...</div>
+                <div class="setup-actions">
+                    <a class="setup-btn" id="downloadBtn" href="#" target="_blank">
+                        Scarica Ollama
+                    </a>
+                    <span class="skip-link" id="alreadyInstalled">Ho già Ollama installato</span>
+                </div>
+                <div class="waiting-block" id="waitingOllama">
+                    <div class="waiting-spinner"></div>
+                    <div class="waiting-text">Stai installando Ollama? Lo rilevo automaticamente...</div>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="setup-step" id="step2">
+                <div class="step-icon">🔄</div>
+                <div class="step-title">Avvio di Ollama</div>
+                <div class="step-desc">
+                    Ollama si avvia automaticamente dopo l'installazione.
+                    Se non parte, aprilo da Applicazioni o dal Menu Start.
+                </div>
+                <div class="waiting-block active">
+                    <div class="waiting-spinner"></div>
+                    <div class="waiting-text" id="waitingOllamaText">In attesa che Ollama sia online...</div>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="setup-step" id="step3">
+                <div class="step-icon">🧠</div>
+                <div class="step-title">Download del modello IA</div>
+                <div class="step-desc">
+                    Ora scarichiamo il modello Qwen 3.5 (~2.7 GB).
+                    Succede solo una volta — resta salvato localmente.
+                </div>
+                <div class="setup-actions" id="pullActions">
+                    <button class="setup-btn" id="pullBtn" onclick="startModelPull()">
+                        Scarica Modello IA (Qwen 3.5:4b)
+                    </button>
+                </div>
+                <div id="pullProgress" style="display:none; margin-top:24px;">
+                    <div class="pull-progress">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="pullBar"></div>
+                        </div>
+                        <div class="progress-text" id="pullText">Avvio download...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP DONE -->
+            <div class="setup-step" id="stepDone">
+                <div class="step-icon">✨</div>
+                <div class="step-title">Tutto pronto!</div>
+                <div class="step-desc">
+                    Tutto è installato e funzionante.
+                    È il momento di trovare ispirazione.
+                </div>
+                <div class="setup-actions">
+                    <button class="setup-btn success" onclick="finishSetup()">
+                        Inizia a usare Inspire
+                    </button>
+                </div>
+            </div>
+
+            <!-- FILE:// ERROR -->
+            <div class="setup-step" id="stepFileError">
+                <div class="step-icon">🚫</div>
+                <div class="step-title">Usa lo script di avvio</div>
+                <div class="step-desc">
+                    Hai aperto il file direttamente nel browser (<code style="background:var(--surface-alt);padding:2px 6px;border-radius:4px;font-size:12px;">file://</code>).<br>
+                    Il browser blocca le connessioni locali per sicurezza.
+                    Usa lo script di avvio — fa tutto in automatico.
+                </div>
+                <div class="os-badge" id="osBadgeError">Rilevamento OS...</div>
+                <div class="setup-actions">
+                    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;width:100%;max-width:400px;text-align:left;">
+                        <div style="font-size:13px;font-weight:700;color:var(--accent);margin-bottom:12px;" id="launchInstructionTitle">Come avviare:</div>
+                        <div id="launchInstructions" style="font-size:13px;color:var(--text-muted);line-height:1.8;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ MAIN APP ═══════════ -->
+    <div class="app">
+        <div class="topbar">
+            <div class="brand-area">
+                <img src="logo.svg" alt="Inspire" class="brand-logo">
+                <div class="brand">INSPIRE</div>
+            </div>
+            <div class="topbar-right">
+                <select class="pill-select" id="langSelect" onchange="switchLang(this.value)">
+                    <option value="it" selected>🇮🇹 IT</option>
+                    <option value="en">🇬🇧 EN</option>
+                </select>
+                <div class="status-pill">
+                    <span class="dot" id="statusDot"></span>
+                    <span id="statusText">Connessione...</span>
+                </div>
+                <select class="pill-select" id="modelSelect" disabled>
+                    <option value="">Nessun modello</option>
+                </select>
+                <button class="bookmarks-toggle" id="bookmarksToggle" onclick="toggleBookmarksPanel()" title="Salvati">
+                    <span>♥</span>
+                    <span class="badge" id="bookmarksBadge" style="display:none;">0</span>
+                </button>
+                <button class="theme-toggle" id="safeModeToggle" onclick="toggleSafeMode()" title="Safe Mode attivo">
+                    <span id="safeModeIcon">🛡️</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Cambia tema">
+                    <span id="themeIcon">☀️</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="hero">
+                <h1 id="heroTitle">Cosa ti ispira oggi?</h1>
+                <div style="text-align:center;margin:-8px 0 4px;"><span style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:3px 12px;border-radius:12px;font-size:0.75rem;font-weight:600;letter-spacing:0.5px;">QWEN 3.5 + Qwen3-Embedding-4B</span></div>
+                <p id="heroSub">Trova libri e film che accendono passione e curiosità</p>
+                <div class="categories">
+                    <div class="cat-pill books">
+                        <input type="radio" name="category" id="catBooks" value="books" checked>
+                        <label for="catBooks">
+                            <span id="catBooksLabel">Libri</span>
+                        </label>
+                    </div>
+                    <div class="cat-pill movies">
+                        <input type="radio" name="category" id="catMovies" value="movies">
+                        <label for="catMovies">
+                            <span id="catMoviesLabel">Film</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea
+                        id="promptInput"
+                        placeholder="es. Aiutami a spiegare a mio figlio quanto sia importante rispettare le regole di un gioco&#10;es. Voglio motivarmi per perdere peso&#10;es. Cerca l'ispirazione per un viaggio di coppia"
+                    ></textarea>
+                    <span class="char-hint">Ctrl+Enter</span>
+                </div>
+                <button class="submit-btn" id="submitBtn" onclick="handleSubmitClick()">
+                    <span id="submitLabel">Trova Ispirazione</span>
+                </button>
+                <div class="error-msg" id="errorMsg"></div>
+            </div>
+
+            <div class="bookmarks-panel" id="bookmarksPanel">
+                <div class="bookmarks-panel-header">
+                    <span class="bookmarks-panel-title" id="bookmarksPanelTitle">I tuoi salvati</span>
+                    <button class="bookmarks-close" onclick="toggleBookmarksPanel()">✕</button>
+                </div>
+                <div id="bookmarksContent"></div>
+            </div>
+
+            <div id="queryExpansionBanner" style="display:none;"></div>
+            <div class="results-section" id="results"></div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://ollama.com" target="_blank">Powered by Ollama</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+            <p id="footerText">Funziona 100% in locale. I tuoi dati non lasciano mai il tuo computer.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

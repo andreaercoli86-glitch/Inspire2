@@ -1,0 +1,112 @@
+{
+    "scienzia":    ["scientist", "physicist", "mathematician", "Nobel", "theorem", "equation", "laboratory", "scienziato", "fisico", "matematico"],
+    "accademic":   ["university", "Cambridge", "Princeton", "Harvard", "MIT", "Oxford", "doctorate", "thesis", "professor", "università", "dottorato"],
+    "fisic":       ["physicist", "physics", "quantum", "relativity", "atom", "nuclear", "particle", "fisico", "fisica"],
+    "matemati":    ["mathematician", "mathematics", "equation", "theorem", "proof", "algorithm", "matematico", "matematica"],
+    "biolog":      ["biologist", "biology", "evolution", "DNA", "genetics", "species", "biologo", "evoluzione"],
+    "chimi":       ["chemist", "chemistry", "chemical", "molecule", "compound", "chimico", "chimica"],
+    "astrono":     ["astronomer", "astronomy", "telescope", "cosmos", "planet", "star", "astronomo"],
+    "ingegner":    ["engineer", "engineering", "inventor", "patent", "prototype", "ingegnere", "inventore"],
+    "tecnolog":    ["computer", "hacker", "programmer", "software", "algorithm", "Silicon Valley", "startup", "programmatore"],
+    "robot":       ["robot", "android", "artificial intelligence", "cyborg", "machine", "automaton"],
+
+    "medic":       ["surgeon", "hospital", "diagnosis", "patient", "scalpel", "operating", "chirurgo", "ospedale", "paziente"],
+    "psicolog":    ["psychologist", "therapist", "therapy", "trauma", "disorder", "psychiatric", "psicologo", "terapia"],
+    "malatti":     ["disease", "cancer", "illness", "terminal", "treatment", "cure", "malattia", "cancro", "cura"],
+    "dipendenz":   ["addiction", "rehab", "drugs", "alcohol", "overdose", "withdrawal", "droga", "dipendenza"],
+
+    "filosof":     ["philosopher", "philosophy", "existential", "moral", "ethics", "filosofo", "filosofia"],
+    "religio":     ["priest", "church", "monastery", "faith", "prayer", "God", "prete", "chiesa", "monastero", "fede"],
+    "spiritual":   ["meditation", "enlightenment", "monk", "temple", "sacred", "meditazione", "monaco", "tempio"],
+
+    "guerr":       ["soldier", "battle", "troops", "invasion", "regiment", "trench", "combat", "soldato", "battaglia", "trincea"],
+    "nazi":        ["Nazi", "Holocaust", "concentration camp", "Auschwitz", "Gestapo", "SS", "lager", "deportazione"],
+    "resist":      ["resistance", "partisan", "underground", "liberation", "resistenza", "partigiano", "liberazione"],
+    "terroris":    ["terrorist", "bomb", "hostage", "hijack", "attack", "terrorista", "ostaggio", "attentato"],
+
+    "medioev":     ["medieval", "knight", "castle", "crusade", "sword", "cavaliere", "castello", "crociata"],
+    "rinasciment": ["Renaissance", "Florence", "Michelangelo", "Leonardo", "Medici", "Rinascimento", "Firenze"],
+    "rivoluzion":  ["revolution", "revolutionary", "uprising", "guillotine", "rivoluzione", "rivolta"],
+    "antic":       ["ancient", "Roman", "Greek", "gladiator", "emperor", "Senate", "romano", "gladiatore", "imperatore"],
+    "pirat":       ["pirate", "ship", "treasure", "captain", "Caribbean", "pirata", "tesoro", "capitano"],
+    "coloni":      ["colony", "colonial", "settler", "plantation", "slavery", "colonia", "schiavitù", "piantagione"],
+    "egizi":       ["Egypt", "pharaoh", "pyramid", "Nile", "mummy", "Egitto", "faraone", "piramide"],
+
+    "mafi":        ["mafia", "mob", "gangster", "Corleone", "camorra", "ndrangheta", "boss", "clan"],
+    "polizia":     ["detective", "investigation", "murder", "suspect", "evidence", "forensic", "detective", "omicidio", "indagine"],
+    "prigion":     ["prison", "inmate", "escape", "warden", "cell", "sentence", "prigione", "detenuto", "cella"],
+    "serial":      ["serial killer", "murder", "victim", "FBI", "profiler", "assassino", "vittima"],
+    "truff":       ["heist", "robbery", "con artist", "scam", "swindle", "thief", "rapina", "truffatore", "ladro"],
+    "giustizi":    ["trial", "lawyer", "courtroom", "verdict", "jury", "judge", "processo", "avvocato", "giuria"],
+    "spionag":     ["spy", "espionage", "MI6", "CIA", "KGB", "agent", "undercover", "spia", "agente"],
+
+    "calcio":      ["soccer", "football", "goalkeeper", "championship", "calciatore", "portiere", "campionato"],
+    "boxe":        ["boxing", "boxer", "heavyweight", "ring", "knockout", "pugile", "campione"],
+    "basket":      ["basketball", "NBA", "coach", "dunk", "court", "canestro", "allenatore"],
+    "tennis":      ["tennis", "racket", "Wimbledon", "match point", "racchetta"],
+    "corsa":       ["marathon", "runner", "race", "Olympic", "sprint", "maratona", "corridore", "olimpiade"],
+    "nuoto":       ["swimming", "swimmer", "pool", "dive", "nuotatore", "piscina", "tuffo"],
+    "ciclism":     ["cycling", "bicycle", "Tour de France", "cyclist", "ciclista", "bicicletta"],
+
+    "music":       ["musician", "composer", "orchestra", "symphony", "concert", "musicista", "compositore", "concerto"],
+    "rock":        ["rock", "band", "guitar", "concert", "tour", "chitarra", "palcoscenico"],
+    "jazz":        ["jazz", "saxophone", "trumpet", "improvisation", "sassofono", "tromba"],
+    "opera":       ["opera", "soprano", "tenor", "aria", "libretto", "soprano", "tenore"],
+    "pittor":      ["painter", "painting", "canvas", "portrait", "gallery", "pittore", "dipinto", "galleria"],
+    "scultore":    ["sculptor", "sculpture", "marble", "chisel", "statue", "scultore", "scultura", "marmo"],
+    "danz":        ["dancer", "ballet", "choreography", "stage", "ballerina", "danza", "coreografia"],
+    "teatr":       ["theater", "actor", "stage", "performance", "playwright", "teatro", "attore", "drammaturgo"],
+    "fotograf":    ["photographer", "camera", "photograph", "lens", "darkroom", "fotografo", "macchina fotografica"],
+    "cinema":      ["director", "filmmaker", "screenplay", "set", "audition", "regista", "sceneggiatura"],
+
+    "viagg":       ["journey", "travel", "traveler", "backpack", "passport", "viaggio", "viaggiatore"],
+    "esotic":      ["jungle", "tropical", "safari", "India", "Thailand", "Africa", "Bali", "Tibet", "Morocco", "giungla", "tropicale"],
+    "esplor":      ["explorer", "expedition", "trek", "trekking", "esploratore", "spedizione"],
+    "avventur":    ["adventure", "adventurer", "quest", "treasure", "avventuriero", "avventura"],
+
+    "natur":       ["wilderness", "wildlife", "safari", "jungle", "rainforest", "savanna", "giungla", "savana"],
+    "animal":      ["animal", "veterinarian", "zoo", "wildlife", "animale", "veterinario"],
+    "ecolog":      ["environment", "pollution", "climate", "deforestation", "ambiente", "inquinamento"],
+    "montagn":     ["mountain", "climb", "summit", "Everest", "Alps", "montagna", "scalata", "vetta"],
+    "mare":        ["ocean", "sea", "island", "shipwreck", "sailor", "oceano", "isola", "naufragio", "marinaio"],
+
+    "spazio":      ["astronaut", "NASA", "spacecraft", "orbit", "space station", "astronauta", "stazione spaziale"],
+    "alien":       ["alien", "extraterrestrial", "UFO", "invasion", "contact", "alieno", "extraterrestre"],
+
+    "famigli":     ["family", "father", "mother", "sibling", "inheritance", "famiglia", "padre", "madre", "eredità"],
+    "matrimoni":   ["wedding", "marriage", "bride", "groom", "divorce", "matrimonio", "sposa", "divorzio"],
+    "adolescen":   ["teenager", "high school", "prom", "puberty", "adolescente", "liceo"],
+    "orfan":       ["orphan", "adoption", "foster", "orphanage", "orfano", "adozione", "orfanotrofio"],
+
+    "depress":     ["depression", "loneliness", "isolation", "hopeless", "depressione", "solitudine"],
+    "lutto":       ["grief", "mourning", "funeral", "loss", "bereavement", "lutto", "funerale", "perdita"],
+    "bullis":      ["bully", "bullying", "harassment", "outcast", "bullo", "bullismo"],
+    "paur":        ["courage", "brave", "overcome fear", "reassurance", "comfort", "growing up", "inner strength", "facing fears", "nightlight", "bedtime", "coraggio", "affrontare", "superare", "rassicurazione", "crescita", "forza interiore"],
+    "buio":        ["darkness", "night", "light", "courage", "brave", "overcome", "comfort", "bedtime story", "nightlight", "imaginary monsters", "luce", "notte", "coraggio", "mostri immaginari", "crescita"],
+    "superare":    ["overcoming", "resilience", "courage", "growth", "redemption", "transformation", "healing", "inner strength", "coming of age", "coraggio", "riscatto", "crescita", "trasformazione", "guarigione"],
+    "riscatt":     ["redemption", "comeback", "overcoming", "resilience", "riscatto", "rinascita"],
+
+    "politic":     ["president", "election", "parliament", "campaign", "corruption", "presidente", "elezione", "corruzione"],
+    "razzism":     ["racism", "segregation", "civil rights", "discrimination", "razzismo", "segregazione", "diritti civili"],
+    "immigra":     ["immigrant", "refugee", "border", "asylum", "deportation", "immigrato", "rifugiato", "frontiera"],
+    "femminism":   ["feminist", "suffragette", "equality", "emancipation", "femminista", "emancipazione"],
+    "schiavit":    ["slave", "slavery", "plantation", "abolition", "schiavo", "schiavitù", "abolizione"],
+
+    "cucin":       ["chef", "restaurant", "cooking", "recipe", "cuisine", "kitchen", "cuoco", "ristorante", "cucina", "ricetta"],
+    "vino":        ["wine", "vineyard", "winery", "sommelier", "vino", "vigna", "cantina"],
+
+    "vampir":      ["vampire", "blood", "fangs", "coffin", "vampiro", "sangue", "bara"],
+    "fantasm":     ["ghost", "haunted", "spirit", "apparition", "fantasma", "infestato", "spirito"],
+    "zombie":      ["zombie", "undead", "apocalypse", "infected", "non morto", "apocalisse"],
+    "strega":      ["witch", "witchcraft", "spell", "coven", "strega", "incantesimo", "magia nera"],
+    "demoni":      ["demon", "exorcism", "possession", "hell", "devil", "demone", "esorcismo", "diavolo"],
+
+    "moda":        ["fashion", "designer", "runway", "model", "couture", "stilista", "passerella", "modella"],
+    "architet":    ["architect", "architecture", "building", "design", "architetto", "architettura", "edificio"],
+
+    "giornalis":   ["journalist", "newspaper", "reporter", "scoop", "press", "giornalista", "giornale", "stampa"],
+    "documentar":  ["documentary", "footage", "interview", "documentario", "intervista"],
+
+    "imprenditor": ["entrepreneur", "startup", "business", "mogul", "empire", "imprenditore", "azienda"],
+    "finanz":      ["Wall Street", "trader", "stock", "bank", "crash", "borsa", "banchiere"]
+}
