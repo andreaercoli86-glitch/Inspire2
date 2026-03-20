@@ -179,6 +179,7 @@ Rispondi SOLO con il JSON:`;
                 options: {
                     temperature: 0.3,
                     num_predict: 500,
+                    num_ctx: 2048,
                     top_p: 0.85
                 }
             }),
@@ -696,6 +697,7 @@ SOLO JSON: [{"id":1,"text":"..."},{"id":2,"text":"..."},{"id":3,"text":"..."}]`;
                 options: {
                     temperature: 0.4,
                     num_predict: 350,
+                    num_ctx: 2048,
                     top_p: 0.85
                 }
             }),
